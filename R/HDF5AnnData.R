@@ -565,8 +565,11 @@ HDF5AnnData <- R6::R6Class(
         if (rhdf5::H5Iis_valid(private$.h5obj)) {
           # tryCatch({
           rhdf5::H5Fclose(private$.h5obj)
+          print(rhdf5::H5Iis_valid(private$.h5obj)
           rhdf5::H5garbage_collect()
+          print(rhdf5::H5Iis_valid(private$.h5obj)
           gc()
+          print(rhdf5::H5Iis_valid(private$.h5obj)
           # })
         }
       }
