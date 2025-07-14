@@ -560,7 +560,7 @@ HDF5AnnData <- R6::R6Class(
           gc()
         }
       } else {
-        print("Closing HDF5 file")
+        print(paste0("Closing HDF5 file: ", private$.h5obj$file))
         print(rhdf5::H5Iis_valid(private$.h5obj))
         if (rhdf5::H5Iis_valid(private$.h5obj)) {
           # tryCatch({
