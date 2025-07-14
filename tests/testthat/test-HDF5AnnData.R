@@ -10,6 +10,7 @@ test_that("opening H5AD works", {
   print("Opened first H5AD file")
   expect_true(inherits(adata, "HDF5AnnData"))
   adata$close()
+  print("Closed first H5AD file")
 })
 
 adata <- HDF5AnnData$new(file)
